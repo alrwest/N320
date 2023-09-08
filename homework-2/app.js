@@ -4,7 +4,7 @@ let date = new Date();
 let dateHeader = document.getElementsByTagName("h2")[1];
 
 //display month, day year
-let dateSettings = { month: 'numeric', day: 'numeric', year: 'numeric'};
+let dateSettings = { month: 'numeric', day: 'numeric', year: 'numeric' };
 //format date as a string
 let formattedDate = date.toLocaleDateString('en-US', dateSettings);
 
@@ -31,21 +31,22 @@ document.body.appendChild(dateHeader);
 let paramOne = 4;
 let paramTwo = 7;
 
-//print params in paragraph
+//display params in paragraph
 let paragraphOne = document.createElement("p"); //create new 'p' tag
 paragraphOne.textContent = `${paramOne} ` + `${paramTwo}`;
 document.body.appendChild(paragraphOne);
 
-
+//higher order function
 const arithmeticValues = (paramOne, paramTwo, cb) =>  {
-    let addition = paramTwo + paramOne;
-    let subtraction = paramTwo - paramOne;
-    let multiplication = paramOne * paramTwo;
-    let division = Math.floor(paramTwo / paramOne);
+    let addition = paramTwo + paramOne; //add
+    let subtraction = paramTwo - paramOne; //subtract
+    let multiplication = paramOne * paramTwo; //multiply
+    let division = Math.floor(paramTwo / paramOne); //divide
 
-    cb(addition, subtraction, multiplication, division);
+    cb(addition, subtraction, multiplication, division); //callback
 };
 
+//callback function
 const cb = (addition, subtraction, multiplication, division) => {
     let total = addition + subtraction + multiplication + division; //total
 
