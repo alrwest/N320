@@ -1,0 +1,5 @@
+#files/folders/extensions to ignore!
+
+*.vscode
+
+node_modules/
