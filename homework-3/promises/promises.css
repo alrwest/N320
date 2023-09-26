@@ -1,0 +1,42 @@
+h2 {
+    margin-left: 40px;
+}
+.wrapper {
+   /*background-color: aquamarine;*/
+    min-width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 800;
+}
+
+.quotes {
+    width: 500px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(238, 232, 232);
+    border-radius: 8%;
+    margin: 20px;
+}
+
+.author {
+    font-style: italic;
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.errors {
+    font-style: italic;
+    font-weight: 800;
+    margin-left: 60px;
+    font-size: 25px;
+    color: rgb(205, 4, 4);
+}
