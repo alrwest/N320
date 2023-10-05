@@ -33,3 +33,35 @@ class Student extends Person {
 
 let Abby = new Student('Abby', 24, 'Informatics');
 Abby.greeting();
+
+
+class Vehicle {
+    constructor(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    vInfo() {
+        return `This vehicle is a ${this.year} ${this.make} ${this.model}.`;
+    }
+}
+
+class Car extends Vehicle {
+    constructor(make, model, year, version, doorSize) {
+        super(make, model, year);
+        this.version = version;
+        this.doorSize = doorSize;
+        this.wheels = 4;
+    }
+}
+
+let charger = new Car("Dodge", "Charger", 2000, 4);
+console.log(charger.vInfo());
+
+class Motorcycle extends Vehicle  {
+    constructor() {
+        super(...arguments);
+        this.wheels = 2;
+
+    }
+}

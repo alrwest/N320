@@ -22,4 +22,55 @@ const students = [
         sList[0].appendChild(listElement);
     });
 
-   
+
+    //check to see if students passed using the every function
+    var allPass = students.every(students => {
+        return students.grades.every(grade => grade >= 60);
+    });
+
+    function displayPassingStudents() {
+        let pTag1 = document.getElementsByTagName("p")[7];
+        pTag1.textContent = allPass;
+    }
+    displayPassingStudents();
+
+
+//some method to see if at least one student has a perfect record
+var perfectRecord = students.some(students => {
+    let perfectGrade = 100;
+    return students.grades.some(grade => grade === perfectGrade);
+});
+//console.log(perfectRecord);
+
+function displayPerfectRecord() {
+    let pTag9 = document.getElementsByTagName("p")[9];
+    pTag9.textContent = perfectRecord;
+}
+//displayPerfectRecord();
+
+
+//create a list of students with an average grade of 90+
+const goodGrades = () => {
+    let bestStudents = students.filter(function(student) {
+        let gradeSum = student.grades.reduce((accumulator, grade) => accumulator + grade, 0);
+        let average = gradeSum / student.grades.length;
+        return average >= 90;
+    });
+
+    //mapping out just the names of students
+    return bestStudents.map(student => student.name)
+}
+console.log("best students:", goodGrades());
+
+//mapping new array to show average of all students and their name in an unordered list 
+
+const getStudentSummaries = () => {
+    const studentSummaries = students.map(student => {
+        let gradeSum = student.grades.reduce((accumulator, grade) => accumulator + grade, 0);
+        let average = gradeSum / student.grades.length;
+        studentSummaries.map(student => student.name, student.average);
+    });  
+    return studentSummaries;
+}
+
+console.log(getStudentSummaries());
