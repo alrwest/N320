@@ -68,7 +68,10 @@ const getStudentSummaries = () => {
     const studentSummaries = students.map(student => {
         let gradeSum = student.grades.reduce((accumulator, grade) => accumulator + grade, 0);
         let average = gradeSum / student.grades.length;
-        studentSummaries.map(student => student.name, student.average);
+       return {
+        name: student.name,
+        average: average
+       };
     });  
     return studentSummaries;
 }
