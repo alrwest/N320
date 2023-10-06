@@ -1,0 +1,13 @@
+* {
+    margin-bottom: 16px;
+}
+
+body {
+    background-color: #5789f7;
+}
+
+div {
+    width: 600px;
+    height: 100%;
+    background-color: greenyellow;
+}
