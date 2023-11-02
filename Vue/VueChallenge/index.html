@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src ="app.js" defer></script>
+</head>
+<body>
+    <article id="challenge">
+        <h1>{{ title }}</h1>
+        <h2>{{ name }}</h2>
+        <p> {{ getTodayDate() }}</p>
+
+        <button v-on:click>Add</button>
+        <button> Remove</button>
+        <p>Count: {{ counter }}</p>
+    </article>
+    
+</body>
+</html>
